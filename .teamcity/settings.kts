@@ -31,7 +31,6 @@ project {
 
     vcsRoot(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
 
-    buildType(Test_2)
     buildType(Test)
 }
 
@@ -59,26 +58,6 @@ object Test : BuildType({
             conditions {
                 doesNotEqual("teamcity.build.branch", "master")
             }
-            goals = "clean test"
-        }
-    }
-
-    triggers {
-        vcs {
-        }
-    }
-})
-
-object Test_2 : BuildType({
-    name = "Test"
-
-    vcs {
-        root(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
-    }
-
-    steps {
-        maven {
-            name = "Test"
             goals = "clean test"
         }
     }
