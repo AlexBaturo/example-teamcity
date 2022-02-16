@@ -37,6 +37,8 @@ project {
 object Test : BuildType({
     name = "Test or deploy to Nexus"
 
+    artifactRules = "+:targer/*.jar"
+
     vcs {
         root(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
     }
