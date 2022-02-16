@@ -35,7 +35,7 @@ project {
 }
 
 object Test : BuildType({
-    name = "test"
+    name = "Build master and deploy to Nexus"
 
     vcs {
         root(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
