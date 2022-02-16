@@ -53,7 +53,6 @@ object Test : BuildType({
 
     triggers {
         vcs {
-            branchFilter = "+:refs/heads/master"
         }
     }
 })
