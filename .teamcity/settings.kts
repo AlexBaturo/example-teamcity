@@ -53,6 +53,14 @@ object Test : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             userSettingsSelection = "settings.xml"
         }
+        maven {
+            name = "Test"
+
+            conditions {
+                doesNotEqual("teamcity.build.branch", "master")
+            }
+            goals = "clean test"
+        }
     }
 
     triggers {
