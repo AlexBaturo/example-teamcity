@@ -77,6 +77,13 @@ object Test_2 : BuildType({
         root(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
     }
 
+    steps {
+        maven {
+            name = "Test"
+            goals = "clean"
+        }
+    }
+
     triggers {
         vcs {
         }
