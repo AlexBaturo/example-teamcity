@@ -72,7 +72,7 @@ object Test_2 : BuildType({
     steps {
         maven {
             name = "Test"
-            goals = "clean"
+            goals = "clean test"
         }
     }
 
