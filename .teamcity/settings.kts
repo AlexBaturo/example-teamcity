@@ -45,10 +45,6 @@ object Test : BuildType({
     steps {
         maven {
             name = "Build master and deploy to Nexus"
-
-            conditions {
-                equals("teamcity.build.branch", "master")
-            }
             goals = "clean deploy"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             userSettingsSelection = "settings.xml"
