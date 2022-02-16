@@ -31,6 +31,7 @@ project {
 
     vcsRoot(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
 
+    buildType(Test_2)
     buildType(Test)
 }
 
@@ -61,6 +62,19 @@ object Test : BuildType({
             }
             goals = "clean test"
         }
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+})
+
+object Test_2 : BuildType({
+    name = "Test"
+
+    vcs {
+        root(HttpsGithubComAlexBaturoExampleTeamcityGitRefsHeadsMaster)
     }
 
     triggers {
